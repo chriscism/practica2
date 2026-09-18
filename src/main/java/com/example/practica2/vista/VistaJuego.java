@@ -138,6 +138,7 @@ public class VistaJuego {
 
             Button tomarCarta = new Button("TOMA UNA CARTA");
             Button parar = new Button("DETENTE");
+            Button deshacer = new Button("DESHACER MOVIMIENTO");
             tomarCarta.setStyle(estiloBoton);
             parar.setStyle(estiloBoton);
 
