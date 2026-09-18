@@ -1,7 +1,7 @@
 package com.example.practica2.modelo;
 
 public class Movimiennto {
-    public enum Accion {PIDECARTA, AVANZATURNO};
+    public enum Accion {PIDECARTA};
     private Accion accion;
     private  int turnoAnterior;
     private  boolean perdio;
