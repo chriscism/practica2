@@ -113,6 +113,16 @@ public class ControladorUI {
         if(historial.vacia()) return;
         Movimiennto ultimoMovimiento = historial.pop();
 
+        if (ultimoMovimiento.getAccion() == Movimiennto.Accion.PIDECARTA) {
+            Jugador j = controlador.getJugadores().get(ultimoMovimiento.getTurnoAnterior());
+            j.getMano().removerUltimaCarta();
+            j.setYaPerdio(ultimoMovimiento.isPerdio());
+            turnoDeJugador = ultimoMovimiento.getTurnoAnterior();
+        } else if (ultimoMovimiento.getAccion() == Movimiennto.Accion.AVANZATURNO) {
+            turnoDeJugador = ultimoMovimiento.getTurnoAnterior();
+        }
+
+        mostrarPantallaJuego();
     }
 
 }
