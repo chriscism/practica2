@@ -1,10 +1,11 @@
-package com.example.practica2;
+package com.example.practica2.controlador;
 
-import com.example.practica2.Carta;
-import com.example.practica2.Dealer;
-import com.example.practica2.Jugador;
-import com.example.practica2.Mazo;
-import com.example.practica2.Vista;
+import com.example.practica2.modelo.Carta;
+import com.example.practica2.modelo.Dealer;
+import com.example.practica2.modelo.Jugador;
+import com.example.practica2.modelo.Mazo;
+import com.example.practica2.vista.Vista;
+
 import  java.util.Iterator;
 
 import java.util.ArrayList;

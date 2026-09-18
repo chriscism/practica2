@@ -1,4 +1,4 @@
-package com.example.practica2;
+package com.example.practica2.modelo;
 /**
  * Write a description of class Mazo here.
  *

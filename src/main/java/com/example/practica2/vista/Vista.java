@@ -1,4 +1,4 @@
-package com.example.practica2;
+package com.example.practica2.vista;
 
 import java.util.Scanner;
 

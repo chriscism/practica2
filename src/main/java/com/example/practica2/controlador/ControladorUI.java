@@ -1,10 +1,9 @@
-package com.example.practica2;
+package com.example.practica2.controlador;
 
-import com.example.practica2.Controlador;
-import com.example.practica2.Jugador;
-import com.example.practica2.VistaJuego;
-import com.example.practica2.VistaRegistro;
-import com.example.practica2.VistaResultados;
+import com.example.practica2.modelo.Jugador;
+import com.example.practica2.vista.VistaJuego;
+import com.example.practica2.vista.VistaRegistro;
+import com.example.practica2.vista.VistaResultados;
 import javafx.stage.Stage;
 import java.util.List;
 

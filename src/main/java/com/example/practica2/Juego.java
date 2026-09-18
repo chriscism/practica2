@@ -1,6 +1,6 @@
 package com.example.practica2;
 
-import com.example.practica2.ControladorUI;
+import com.example.practica2.controlador.ControladorUI;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

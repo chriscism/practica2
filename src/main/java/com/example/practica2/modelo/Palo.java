@@ -1,4 +1,4 @@
-package com.example.practica2;
+package com.example.practica2.modelo;
 /**
  * Palos de cartas de una baraja inglesa.
  *

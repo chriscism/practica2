@@ -1,6 +1,6 @@
-package com.example.practica2;
+package com.example.practica2.vista;
 
-import com.example.practica2.ControladorUI;
+import com.example.practica2.controlador.ControladorUI;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

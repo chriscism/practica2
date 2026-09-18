@@ -1,4 +1,4 @@
-package com.example.practica2;
+package com.example.practica2.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
