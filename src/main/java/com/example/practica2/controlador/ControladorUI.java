@@ -56,6 +56,8 @@ public class ControladorUI {
 
     public void pedirCarta() {
         Jugador actual = controlador.getJugadores().get(turnoDeJugador);
+        // almaceno moviminetos en el historial
+        historial.push(new Movimiennto(Movimiennto.Accion.PIDECARTA, turnoDeJugador, actual.isYaPerdio()));
         controlador.anadirCarta(actual);
 
         int puntos = actual.getMano().obtenerSumatoriaDeLasCartas();
