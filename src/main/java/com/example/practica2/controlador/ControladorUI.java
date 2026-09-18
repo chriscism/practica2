@@ -63,6 +63,8 @@ public class ControladorUI {
         int puntos = actual.getMano().obtenerSumatoriaDeLasCartas();
         if (puntos > 21) {
             actual.setYaPerdio(true);
+            // REINICIE LA PILA PARA QUE SE BORRWN TODOS LOS MOVIMIENTOS
+            reiniciarPila();
             avanzarTurno();
         } else if (puntos == 21) {
             avanzarTurno();
@@ -72,7 +74,7 @@ public class ControladorUI {
     }
 
     public void avanzarTurno() {
-        historial.push(new Movimiennto(Movimiennto.Accion.AVANZATURNO, turnoDeJugador, false));
+        reiniciarPila();
         turnoDeJugador++;
         if (turnoDeJugador >= controlador.getJugadores().size() - 1) {
             jugarTurnoDealer();
@@ -118,11 +120,13 @@ public class ControladorUI {
             j.getMano().removerUltimaCarta();
             j.setYaPerdio(ultimoMovimiento.isPerdio());
             turnoDeJugador = ultimoMovimiento.getTurnoAnterior();
-        } else if (ultimoMovimiento.getAccion() == Movimiennto.Accion.AVANZATURNO) {
-            turnoDeJugador = ultimoMovimiento.getTurnoAnterior();
         }
 
         mostrarPantallaJuego();
+    }
+
+    public void reiniciarPila(){
+        historial = new Pila<>(50);
     }
 
 }
