@@ -144,8 +144,9 @@ public class VistaJuego {
             // AUN NO FUNCIONA
             parar.setStyle(estiloBoton);
 
-            tomarCarta.setOnAction(event -> controlador.pedirCarta());
+            tomarCarta.setOnAction(e -> controlador.pedirCarta());
             parar.setOnAction(e -> controlador.avanzarTurno());
+            deshacer.setOnAction(event -> controlador.deshacer());
 
             botones.getChildren().addAll(tomarCarta, parar, deshacer);
             cajaOpciones.getChildren().addAll(turnoJugador, botones);
