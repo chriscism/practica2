@@ -27,4 +27,8 @@ public class Movimiennto {
     public void setPerdio(boolean perdio) {
         this.perdio = perdio;
     }
+
+    public int getTurnoAnterior(){
+        return turnoAnterior;
+    }
 }
