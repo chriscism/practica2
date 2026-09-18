@@ -1,4 +1,4 @@
-package com.example.practica2;
+package com.example.practica1dsa.juegoJavaFX;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
