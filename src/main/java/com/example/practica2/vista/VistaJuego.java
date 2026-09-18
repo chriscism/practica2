@@ -139,13 +139,14 @@ public class VistaJuego {
             Button tomarCarta = new Button("TOMA UNA CARTA");
             Button parar = new Button("DETENTE");
             Button deshacer = new Button("DESHACER MOVIMIENTO");
+            deshacer.setStyle(estiloBoton);
             tomarCarta.setStyle(estiloBoton);
             parar.setStyle(estiloBoton);
 
             tomarCarta.setOnAction(event -> controlador.pedirCarta());
             parar.setOnAction(e -> controlador.avanzarTurno());
 
-            botones.getChildren().addAll(tomarCarta, parar);
+            botones.getChildren().addAll(tomarCarta, parar, deshacer);
             cajaOpciones.getChildren().addAll(turnoJugador, botones);
         }
         return cajaOpciones;
