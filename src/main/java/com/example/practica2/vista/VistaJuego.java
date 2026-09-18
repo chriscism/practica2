@@ -141,7 +141,7 @@ public class VistaJuego {
             Button deshacer = new Button("DESHACER MOVIMIENTO");
             deshacer.setStyle(estiloBoton);
             tomarCarta.setStyle(estiloBoton);
-            // AUN NO FUNCIONA
+            // YA FUNCIONA
             parar.setStyle(estiloBoton);
 
             tomarCarta.setOnAction(e -> controlador.pedirCarta());
