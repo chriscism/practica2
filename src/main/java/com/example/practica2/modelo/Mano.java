@@ -67,4 +67,8 @@ public class Mano {
 
         return lista;
     }
+
+    public int tamanoMano(){
+        return cartasDelUsuario.getTope();
+    }
 }
