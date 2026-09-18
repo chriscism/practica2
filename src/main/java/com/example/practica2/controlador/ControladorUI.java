@@ -1,6 +1,8 @@
 package com.example.practica2.controlador;
 
 import com.example.practica2.modelo.Jugador;
+import com.example.practica2.modelo.Movimiennto;
+import com.example.practica2.modelo.Pila;
 import com.example.practica2.vista.VistaJuego;
 import com.example.practica2.vista.VistaRegistro;
 import com.example.practica2.vista.VistaResultados;
@@ -11,6 +13,7 @@ public class ControladorUI {
     private Stage stage;
     private Controlador controlador;
     private int turnoDeJugador = 0;
+    private Pila<Movimiennto> historial;
 
     public ControladorUI(Stage stage) {
         this.stage = stage;
@@ -19,6 +22,8 @@ public class ControladorUI {
     public void iniciar() {
         this.controlador = new Controlador();
         this.turnoDeJugador = 0;
+        // una cantidad aceptable para la duracion de un blackjack
+        historial = new Pila<>(50);
         mostrarPantallaRegistro();
     }
 
