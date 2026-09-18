@@ -108,4 +108,11 @@ public class ControladorUI {
     public boolean esFinDePartida() {
         return turnoDeJugador >= controlador.getJugadores().size() - 1;
     }
+
+    public void deshacer(){
+        if(historial.vacia()) return;
+        Movimiennto ultimoMovimiento = historial.pop();
+
+    }
+
 }
