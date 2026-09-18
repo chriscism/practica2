@@ -50,4 +50,21 @@ public class Mano {
         }
         return null;
     }
+
+    public List<Carta> getCartasDelUsuarioGUI(){
+        Pila<Carta> pilaAux = new Pila<>(20);
+        List<Carta> lista = new ArrayList<>();
+
+        while(!cartasDelUsuario.vacia()) {
+            Carta c = cartasDelUsuario.pop();
+            lista.add(0, c); // 0 para mantener el orden
+            pilaAux.push(c);
+        }
+
+        while(!pilaAux.vacia()) {
+            cartasDelUsuario.push(pilaAux.pop());
+        }
+
+        return lista;
+    }
 }
