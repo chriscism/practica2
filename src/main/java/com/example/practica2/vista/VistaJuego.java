@@ -46,8 +46,6 @@ public class VistaJuego {
         contenedorCentro.setAlignment(Pos.CENTER);
         contenedorCentro.getChildren().add(cajaJugadores);
         borderPane.setCenter(contenedorCentro);
-
-        // Controles Inferiores (Botones de turno o fin de partida)
         borderPane.setBottom(crearCajaOpciones());
 
         return new Scene(borderPane, 800, 600);
@@ -62,17 +60,16 @@ public class VistaJuego {
         Label puntosDealer;
 
         if (controlador.esFinDePartida()) {
-            for (Object cartaObj : j.getMano().getCartasDelUsuario()) {
+            for (Object cartaObj : j.getMano().getCartasDelUsuarioGUI()) {
                 Label carta = new Label(" " + cartaObj.toString() + " ");
                 carta.setStyle(estiloCarta);
                 cartasDealer.getChildren().add(carta);
             }
             puntosDealer = new Label("Puntaje: " + j.getMano().obtenerSumatoriaDeLasCartas());
         } else {
-            // Mostrar solo una carta si la partida sigue en curso
-            Label cartaOculta = new Label(" " + j.getMano().getCartasDelUsuario().get(0).toString() + " ");
-            Label cartaVisible = new Label(" " + j.getMano().getCartasDelUsuario().get(1).toString() + " ");
-            cartaOculta.setStyle(estiloCarta); // Podrías cambiar el estilo para que se vea como el reverso
+            Label cartaOculta = new Label(" " + j.getMano().getCartasDelUsuarioGUI().get(0).toString() + " ");
+            Label cartaVisible = new Label(" " + j.getMano().getCartasDelUsuarioGUI().get(1).toString() + " ");
+            cartaOculta.setStyle(estiloCarta);
             cartaVisible.setStyle(estiloCarta);
             cartasDealer.getChildren().addAll(cartaOculta, cartaVisible);
             puntosDealer = new Label("Puntaje: ?");
@@ -94,7 +91,7 @@ public class VistaJuego {
         FlowPane cartas = new FlowPane(5, 5);
         cartas.setAlignment(Pos.CENTER);
 
-        for (Object cartaObj : j.getMano().getCartasDelUsuario()) {
+        for (Object cartaObj : j.getMano().getCartasDelUsuarioGUI()) {
             Label lblCarta = new Label(cartaObj.toString());
             lblCarta.setStyle("-fx-background-color: white; -fx-padding: 10 15; -fx-font-size: 14px; -fx-border-radius: 5;");
             cartas.getChildren().add(lblCarta);
