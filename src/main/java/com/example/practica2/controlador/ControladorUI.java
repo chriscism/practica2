@@ -72,6 +72,7 @@ public class ControladorUI {
     }
 
     public void avanzarTurno() {
+        historial.push(new Movimiennto(Movimiennto.Accion.AVANZATURNO, turnoDeJugador, false));
         turnoDeJugador++;
         if (turnoDeJugador >= controlador.getJugadores().size() - 1) {
             jugarTurnoDealer();
